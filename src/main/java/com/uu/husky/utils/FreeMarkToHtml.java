@@ -9,7 +9,7 @@ import freemarker.template.TemplateException;
 import java.io.*;
 import java.util.Map;
 
-public class FreemarkToHtmlUtils {
+public class FreeMarkToHtml {
 
 
     /**
@@ -41,8 +41,8 @@ public class FreemarkToHtmlUtils {
      * @param outFile          生成指定文件
      * @return 成功，返回文件名；失败，返回null。
      */
-    public static String fprint(String templateFilePath, String templateFileName, Map<String, Object> replaceData,
-                                String outFile) {
+    public static String freemarkToHtml(String templateFilePath, String templateFileName, Map<String, Object> replaceData,
+                                        String outFile) {
 
         String path = null;
         Writer out = null;

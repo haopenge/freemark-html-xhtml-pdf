@@ -4,7 +4,7 @@ import com.itextpdf.text.DocumentException;
 import com.itextpdf.tool.xml.exceptions.CssResolverException;
 import com.uu.husky.entity.Student;
 import com.uu.husky.html2pdf.XHtml2Pdf;
-import com.uu.husky.utils.FreemarkToHtmlUtils;
+import com.uu.husky.utils.FreeMarkToHtml;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -24,10 +24,10 @@ public class ApplicationStart {
 
         Map replaceData = initData();
 
-        FreemarkToHtmlUtils.fprint(url.getPath(), "template.ftl", replaceData, url.getPath() + "result.html");
+        FreeMarkToHtml.freemarkToHtml(url.getPath(), "template.ftl", replaceData, url.getPath() + "result.html");
 
         try {
-            XHtml2Pdf.XHtml2Pdf(url.getPath()+ "result.html", url.getPath() + "result.pdf");
+            XHtml2Pdf.XHtml2Pdf(url.getPath() + "result.html", url.getPath() + "result.pdf");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
