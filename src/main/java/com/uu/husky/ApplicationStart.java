@@ -3,7 +3,7 @@ package com.uu.husky;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.tool.xml.exceptions.CssResolverException;
 import com.uu.husky.entity.Student;
-import com.uu.husky.html2pdf.XHtml2Pdf;
+import com.uu.husky.utils.XHtml2Pdf;
 import com.uu.husky.utils.FreeMarkToHtml;
 
 import java.io.FileNotFoundException;
