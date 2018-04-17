@@ -1,4 +1,4 @@
-package com.uu.husky.html2pdf;
+package com.uu.husky.utils;
 
 
 import com.itextpdf.text.Document;
